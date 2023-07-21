@@ -1,0 +1,22 @@
+.navbar {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;   
+    padding: 1.3rem;
+    margin: 0px;
+    background: #071013;
+    color: white;
+}
+
+a {
+    color: #F4FAFF;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #FF6B6B; /* or #49c8ff */
+    transition: color .3s;
+    cursor: pointer;
+}
