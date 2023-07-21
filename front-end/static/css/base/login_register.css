@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(1, 0, 17);
+}
+
+
+.form {
+    background-color: aliceblue;
+    font-weight: 500;
+    padding: 2rem;
+    display: block;
+    margin: 2rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.form label {
+    font-weight: 700;
+    text-decoration: underline;
+    font-size: large;
+    padding: 15px;
+}
+
+a {
+    color: rgb(8, 0, 52);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+
+a:hover {
+    text-decoration: solid;
+    color: #FF6B6B;
+    transition: color .3s;
+}
+
+.input {
+    display: block;
+    margin: 1rem 1rem 1rem 0;
+}
