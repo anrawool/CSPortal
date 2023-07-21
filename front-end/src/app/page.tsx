@@ -1,4 +1,5 @@
 import styles from './page.module.css'
+import ImageComponent from './login/illustration';
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
 
           </div>
           <div className={styles.griditem}>
-            
+            <ImageComponent/>
           </div>
         </div>
       </div>      
