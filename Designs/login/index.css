@@ -41,11 +41,6 @@
     margin-right: auto;
 }
 
-.submit:hover {
-    color: #7f8aff;
-    transition: color .3s ease-in-out;
-}
-
 .txt-field{
     height: 3rem;
     width: 20rem;
