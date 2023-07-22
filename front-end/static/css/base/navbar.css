@@ -1,5 +1,8 @@
 .navbar {
     display: grid;
+    position: fixed;
+    right: 0;
+    left: 0;
     grid-template-columns: 2fr 1fr 1fr 1fr;   
     padding: 1.3rem;
     margin: 0px;

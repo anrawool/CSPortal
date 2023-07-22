@@ -1,7 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+@keyframes slideInFromLeft {
+    0% {
+      left: -10%; /* Starting position, fully hidden to the left */
+    }
+    100% {
+      left: 20px; /* Ending position, slide in 20px from the left */
+    }
+  }
+
+input:focus, input:active {
+    /* border-bottom: #010011 solid 3px; */
+    border-bottom: #ffffff solid 3px;
+}
+.messages {
+    position: absolute;
+    top: 20px;
+    background-color: rgba(255, 127, 127, 0.96);
+    color: #010011;
+    list-style: none;
+    padding : 20px;
+    border-radius: 20px;
+    left: 40px;
+    animation: slideInFromLeft 1s forwards;
+}
 .bg {
     background-color: #010011;
+    position: relative;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
@@ -42,7 +67,8 @@
 }
 
 .submit:hover {
-    color: #7f8aff;
+    color: #66e3f9;
+    cursor: pointer;
     transition: color .3s ease-in-out;
 }
 
@@ -94,6 +120,12 @@
 .sign-up-link{
     color: #010011;
     font-weight: bolder;
+}
+
+
+.sign-up-link:hover {
+    color: #7f8aff;
+    transition: color .3s ease-in-out;
 }
 /* The code that is commented out is for responsive design */
 
