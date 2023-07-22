@@ -1,39 +1,160 @@
-body {
-    background-color: rgb(1, 0, 17);
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.bg {
+    background-color: #010011;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-.form {
-    background-color: aliceblue;
-    font-weight: 500;
-    padding: 2rem;
-    display: block;
-    margin: 2rem;
-    border-radius: 20px;
-    text-align: center;
+.login-card {
+    background-color: white;
+    height: 80vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    place-items: center;
 }
 
-.form label {
-    font-weight: 700;
-    text-decoration: underline;
+.submit{
+    height: 3rem;
+    width: 15rem;
+    border: black;
+    border-width: 2px;
+    border-radius: 100px;
+    top: 10vh;
+    border-style: solid;
+    background-color: #010011;
+    margin-top: 1vh;
+    font-family: 'Inter', sans-serif;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submit:hover {
+    color: #7f8aff;
+    transition: color .3s ease-in-out;
+}
+
+.txt-field{
+    height: 3rem;
+    width: 20rem;
+    border: black;
+    border-width: 2px;
+    border-radius: 100px;
+    top: 5vh;
+    border-style: solid;
+    background-color: white;
+
+    margin-bottom: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Inter', sans-serif;
+    font-size: medium;
+    padding-left: 3vh;
+}
+
+.label{
+    font-family: 'Inter', sans-serif;
     font-size: large;
-    padding: 15px;
+    font-weight: bold;
+    margin: none;
+    line-height: 1vh;
 }
 
-a {
-    color: rgb(8, 0, 52);
-    text-decoration: none;
-    font-weight: 400;
+.illustration {
+    height: 70vh;
+    width: 70vh;
+    padding-left: 5vw;
 }
 
-
-a:hover {
-    text-decoration: solid;
-    color: #FF6B6B;
-    transition: color .3s;
+.heading{
+    font-size: xx-large;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 6vh;
 }
 
-.input {
-    display: block;
-    margin: 1rem 1rem 1rem 0;
+.sign-up{
+    font-family: 'Inter', sans-serif;
+
 }
+
+.sign-up-link{
+    color: #010011;
+    font-weight: bolder;
+}
+/* The code that is commented out is for responsive design */
+
+/* @media only screen and (min-width: 600px) {
+    .login-card {
+        flex-direction: column;
+    }
+
+    .illustration {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+} */
