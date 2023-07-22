@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.bg {
+    background-color: #010011;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background-color: white;
+    height: 80vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    place-items: center;
+}
+
+.submit{
+    height: 3rem;
+    width: 15rem;
+    border: black;
+    border-width: 2px;
+    border-radius: 100px;
+    top: 10vh;
+    border-style: solid;
+    background-color: #010011;
+    margin-top: 1vh;
+    font-family: 'Inter', sans-serif;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.txt-field{
+    height: 3rem;
+    width: 20rem;
+    border: black;
+    border-width: 2px;
+    border-radius: 100px;
+    top: 5vh;
+    border-style: solid;
+    background-color: white;
+
+    margin-bottom: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Inter', sans-serif;
+    font-size: medium;
+    padding-left: 3vh;
+}
+
+.label{
+    font-family: 'Inter', sans-serif;
+    font-size: large;
+    font-weight: bold;
+    margin: none;
+    line-height: 1vh;
+}
+
+.illustration {
+    height: 70vh;
+    width: 70vh;
+    padding-left: 5vw;
+}
+
+.heading{
+    font-size: xx-large;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 6vh;
+}
+
+.sign-up{
+    font-family: 'Inter', sans-serif;
+
+}
+
+.sign-up-link{
+    color: #010011;
+    font-weight: bolder;
+}
+/* The code that is commentd out is for responsive design, will do it later.*/
+
+/* @media only screen and (min-width: 600px) {
+    .login-card {
+        flex-direction: column;
+    }
+
+    .illustration {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+} */
