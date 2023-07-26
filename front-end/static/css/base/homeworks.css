@@ -1,0 +1,48 @@
+
+.homework {
+    background-color: rgba(3, 37, 78, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    margin-right: 30em;
+    box-shadow: -7px 8px 5px 0px #EDF6F9;
+    border: #011C27 solid 2px;
+    
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 7rem;
+}
+
+.available-tabs {
+    margin-left: 50px;
+    width: 150%;
+}
+
+.tabs ul {
+    list-style: none;
+}
+
+.extra-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.text {
+    font-weight: bold;
+}
+
+.extra-info {
+    gap: 10px;
+}
+
+.all-homeworks {
+    margin: 0rem 3rem 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 30px;
+}
