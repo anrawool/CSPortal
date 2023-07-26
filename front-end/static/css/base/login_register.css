@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
 @keyframes slideInFromLeft {
     0% {
       left: -10%; /* Starting position, fully hidden to the left */
@@ -9,23 +8,23 @@
     }
   }
 
+
 input:focus, input:active {
-    /* border-bottom: #010011 solid 3px; */
-    border-bottom: #ffffff solid 3px;
+    outline: none;
+    border-color: #5887FF;
+    transition: border .3s ease-in-out;
 }
 .messages {
-    position: absolute;
-    top: 20px;
-    background-color: rgba(255, 127, 127, 0.96);
-    color: #010011;
+    background-color: rgba(255, 90, 90, 0.96);
+    color: #020b23;
     list-style: none;
-    padding : 20px;
+    padding : 10px;
+    text-align: center;
+    font-size: small; 
     border-radius: 20px;
-    left: 40px;
-    animation: slideInFromLeft 1s forwards;
 }
 .bg {
-    background-color: #010011;
+    background-color: #22031F;
     position: relative;
     height: 100vh;
     width: 100vw;
@@ -37,8 +36,8 @@ input:focus, input:active {
 
 .login-card {
     background-color: white;
-    height: 80vh;
-    width: 90vw;
+    height: 80%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,25 +48,26 @@ input:focus, input:active {
 .submit{
     height: 3rem;
     width: 15rem;
+    transition: color .3s ease-in-out;
     border: black;
     border-width: 2px;
     border-radius: 100px;
     top: 10vh;
     border-style: solid;
-    background-color: #010011;
+    background-color: #00caa9;
     margin-top: 1vh;
     font-family: 'Inter', sans-serif;
     font-size: medium;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #ffffff;
     margin-left: auto;
     margin-right: auto;
 }
 
 .submit:hover {
-    color: #66e3f9;
+    color: #020b23;
     cursor: pointer;
     transition: color .3s ease-in-out;
 }
@@ -78,10 +78,10 @@ input:focus, input:active {
     border: black;
     border-width: 2px;
     border-radius: 100px;
+    transition: border .3s ease-in-out;
     top: 5vh;
     border-style: solid;
     background-color: white;
-
     margin-bottom: 3vh;
     display: flex;
     justify-content: center;
@@ -114,24 +114,56 @@ input:focus, input:active {
 
 .sign-up{
     font-family: 'Inter', sans-serif;
+    transition: color .3s ease-in-out;
+    text-align: center;
 
 }
 
 .sign-up-link{
-    color: #010011;
+    color: #000000;
     font-weight: bolder;
+    transition: color .3s ease-in-out;
 }
 
-
 .sign-up-link:hover {
-    color: #7f8aff;
+    color: #5887FF;
     transition: color .3s ease-in-out;
+}
+
+.all-messages {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    gap: 10px;
+    margin : 10px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    animation: slideInFromLeft 1s forwards;
 }
 /* The code that is commented out is for responsive design */
 
-/* @media only screen and (min-width: 600px) {
+@media only screen and (max-width: 1350px) {
+    form {
+        height: 500px;
+        width: 700px;
+        display: grid; 
+        grid-template-columns: auto;
+        align-items: center;
+        place-items: center;
+    }
     .login-card {
         flex-direction: column;
+        height: 800px;
+        width: 700px;
+    }
+
+    .sign-up {
+        font-size: large;
+    }
+
+    .label {
+        font-size: x-large;
     }
 
     .illustration {
@@ -139,54 +171,13 @@ input:focus, input:active {
     }
 }
 
-@media only screen and (min-width: 768px) {
-
-
-    .col-1 {
-        width: 8.33%;
+@media only screen and (max-width: 768px) {
+    form {
+        height: 80%;
+        width: 70%;
     }
-
-    .col-2 {
-        width: 16.66%;
+    .login-card {
+        height: 80%;
+        width: 70%;
     }
-
-    .col-3 {
-        width: 25%;
-    }
-
-    .col-4 {
-        width: 33.33%;
-    }
-
-    .col-5 {
-        width: 41.66%;
-    }
-
-    .col-6 {
-        width: 50%;
-    }
-
-    .col-7 {
-        width: 58.33%;
-    }
-
-    .col-8 {
-        width: 66.66%;
-    }
-
-    .col-9 {
-        width: 75%;
-    }
-
-    .col-10 {
-        width: 83.33%;
-    }
-
-    .col-11 {
-        width: 91.66%;
-    }
-
-    .col-12 {
-        width: 100%;
-    }
-} */
+}
