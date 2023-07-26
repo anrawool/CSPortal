@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base/homeworks.css' %}">
+    <title>CSPortal | Homeworks</title>
+</head>
+<body>
+    {% include 'base/navbar.html' %}
+
+    <div class="main-content">
+        <div class="available-tabs">
+            <div class="tabs">
+                <h2>Available Tabs:</h2>
+                <ul>
+                    <li><div class="tab-item">Incomplete Homeworks</div></li>
+                    <li><div class="tab-item">Complete Homeworks</div></li>
+                    <li><div class="tab-item">Extended Homeworks</div></li>
+                </ul> 
+            </div>
+        </div>
+        <div class="all-homeworks">
+            {% for homework in all_homeworks %}
+            <div class="homework">
+                <h2>{{homework.title}} - {{homework.subject}}</h2>
+                <div class="extra-info">
+                    <span>Assigned On: {{homework.created_at}}</span>
+                    <span>Updated On: {{homework.updated_at}}</span>
+                </div>
+                <p class="text">{{homework.text}}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</html>

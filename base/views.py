@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
-
+from . import models
 # Create your views here.
 
 @login_required(login_url='login')
@@ -23,6 +23,7 @@ def loginPage(request):
             user = User.objects.get(username=username)
         except:
             messages.error(request, "User does not exist")
+            return redirect('login')
 
         user = authenticate(request, username=username, password=password)
 
@@ -30,7 +31,7 @@ def loginPage(request):
             login(request, user)
             return redirect('home')
         else:
-            messages.error(request, "Username OR password does not exist") 
+            messages.error(request, "Invalid Credentials") 
 
     context = {"page":page}
     return render(request, "base/login_register.html", context)
@@ -51,6 +52,18 @@ def registerUser(request):
             login(request, user)
             return redirect('home')
         else:
-            messages.error(request, "An error has occurred during registration") 
+            all_errors = []
+            for field, errors in form.errors.items():
+                all_errors.extend(errors)
+            for error in all_errors:
+                messages.error(request, error) 
+            context = {"formvals": request.POST}
+            return render(request, 'base/login_register.html', context)
     return render(request, 'base/login_register.html', {"form":form})
 
+
+@login_required(login_url='login')
+def HomeworkPage(request):
+    all_homeworks = models.HomeWorkPost.objects.all()
+    context = {"all_homeworks": all_homeworks}
+    return render(request, "base/homeworks.html", context=context)
