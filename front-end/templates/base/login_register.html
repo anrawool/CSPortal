@@ -9,25 +9,26 @@
     <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/base/main.css' %}">
     <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/base/login_register.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'images/CSPortal.png' %}">
-    <script src='main.js'></script>
+    <!-- <script src='main.js'></script> -->
 </head>
 <body class="bg">
-    {% if messages %}
-    <ul class="messages">
-       {% for message in messages %} 
-            <li>{{message}}</li>
-       {% endfor %} 
-    </ul>
-    {% endif %}
     {% if page == 'login' %}
     <div class="login-card">
+
+        <div class="all-messages">
+            {% if messages %}
+                {% for message in messages %}
+                <li class="messages">{{message}}</li>
+                {% endfor %}
+            {% endif %}
+        </div>
         <div class="login-panel">
             <form action="" method="post">
                 {% csrf_token %}
                 <h1 class="heading">CSPortal | Log In</h1>
                 <p class="label">Username</p>
                 <input type="text" name="username" class="txt-field username">
-                <p class="label"> Password</p>
+                <p class="label">Password</p>
                 <input type="password" name="password" class="txt-field">
                 <button type="submit" class="submit" name="Login">Log In</button>
                 <p class="sign-up">Don't have an account? <a href="{% url 'register' %}" class="sign-up-link">Sign Up</a></p>
@@ -37,6 +38,32 @@
             <img src="{% static 'images/base/login_illustration.png' %}" alt="illustration" class="illustration">
         </div>
         
+    </div>
+    {% else %}
+    <div class="login-card">
+        <div class="all-messages">
+            {% if messages %}
+                {% for message in messages %}
+                <li class="messages">{{message}}</li>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <div class="login-panel">
+            <form action="" method="post">
+                {% csrf_token %}
+                <h1 class="heading">CSPortal | Sign Up</h1>
+                <p class="label">Username</p>
+                <input type="text" name="username" class="txt-field username" placeholder="Enter Your Username Here..." autocomplete="off" value="{{formvals.username}}"/>
+                <p class="label">Password</p>
+                <input type="password" name="password1" class="txt-field" placeholder="Enter Your Password Here..." autocomplete="off" value="{{formvals.password1}}">
+                <input type="password" name="password2" class="txt-field" placeholder="Confirm Your Password Here..." autocomplete="off" values="{{formvals.password2}}">
+                <button type="submit" class="submit" name="Register">Sign Up</button>
+                <p class="sign-up">Already Have An Account? <a href="{% url 'login' %}" class="sign-up-link">Log In</a></p>
+            </form>
+        </div>
+        <div class="illustration">
+            <img src="{% static 'images/base/login_illustration.png' %}" alt="illustration" class="illustration">
+        </div> 
     </div>
     {% endif %}
 </body>
