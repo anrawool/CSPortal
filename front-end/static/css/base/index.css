@@ -5,6 +5,7 @@
 
 body {
     background-color: #0E0E0E;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     display: flex;
     align-items: center;
@@ -18,25 +19,6 @@ body {
     align-items: center;
     justify-content: center;
     height: 100%;
-
-}
-
-
-.NavBar {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    height: 100vh;
-    width: 23vw;
-    position: fixed;
-    left: 0px;
-    border-right: 1px solid #00524A;
-    color: white;
-    font-family: 'Raleway', sans-serif;
-    font-size: 2rem;
-    margin: 0;
-    padding: 0;
 }
 
 .link {
@@ -45,27 +27,37 @@ body {
     margin: 10px 0;
 }
 
+.link:not(.active-tab) {
+    margin: 10px 30px;
+    overflow: hidden;
+}
+
+.link a {
+    text-decoration: none;
+    color: white;
+    transition: color .3s ease-in-out;
+}
+
+.link a:hover {
+    color: aquamarine;
+    transition: color .3s ease-in-out;
+}
+
 .active-tab {
     height: 4rem;
     background-color: #00524A;
     width: 100%;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px; 
     display: flex;
     align-items: center;
     padding-left: 20px;
 }
 
-.card-design {
-    height: fit-content;
-    width: 40vw;
-    border-bottom: 1px solid #00524A;
-    margin-left: 2vw;
-    padding-bottom: 2vh;
-}
 
 .homework-title {
     color: white;
     font-size: x-large;
-    font-family: 'Poppins', sans-serif;
 }
 
 .content {
@@ -79,6 +71,7 @@ body {
     background-color: #00524A;
     height: 80vh;
     margin-left: 12vw;
+    border-radius: 20px;
 }
 .rhs {
     width: 77vw;
@@ -86,4 +79,11 @@ body {
     position: absolute;
     right: 0;
     left: auto;
+}
+
+.profile {
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 20px;
 }

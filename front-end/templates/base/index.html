@@ -1,18 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSPortal</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>CSPortal | Home</title>
+    {% load static %}
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/base/main.css' %}">
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/base/index.css' %}">
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/base/homework.css' %}">
 </head>
+
 <body>
-    
-    <!-- {% if request.user.is_authenticated %}
-    <p>Hello {{request.user}}</p>
-    <a href="{% url 'logout' %}">Logout</a>
-    {% else %}
-    <a href="{% url 'login' %}">Login</a>
-    {% endif %} -->
     {% include 'base/navbar.html' %}
+        <div class="rhs">
+            <div class="centre">
+
+                <div class="Feed">
+                    <div class="all-homeworks" style="margin-top: 300px;">
+                        {% for homework in all_homeworks %}
+                        <div class="card-design homework">
+                            <h2>{{homework.title}} - {{homework.subject}}</h2>
+                            <div class="extra-info">
+                                <span>Assigned On: {{homework.created_at}}</span>
+                                <span>Updated On: {{homework.updated_at}}</span>
+                            </div>
+                            <p class="text">{{homework.text}}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="profile-panel">
+        
+                    <div class="profile">
+                        <div class="profile-pic">Profile Picture</div>
+                        <div class="user-details">
+                            Name: Name
+                            Grade: 9
+                            Class: C TrailBlazers
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
 </body>
+
 </html>

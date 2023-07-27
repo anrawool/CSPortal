@@ -15,7 +15,6 @@ class HomeWorkPost(models.Model):
     text = models.TextField()
     created_at = models.DateField(auto_created=True)
     updated_at = models.DateTimeField(auto_now=True)
-    # completed = models.CharField(max_length=5, choices=[('Yes', 'Completed'), ('No', 'Not-Completed')], default="Not-Completed")
 
     class Meta:
         ordering = ['-created_at', '-updated_at']

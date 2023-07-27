@@ -9,7 +9,9 @@ from . import models
 
 @login_required(login_url='login')
 def HomeView(request):
-    return render(request, 'base/index.html') # Home Page View
+    all_homeworks = models.HomeWorkPost.objects.all()
+    context = {"all_homeworks": all_homeworks}
+    return render(request, 'base/index.html', context) # Home Page View
 
 def loginPage(request):
     page = 'login'
