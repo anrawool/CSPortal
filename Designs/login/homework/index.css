@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+
+body {
+    background-color: #0E0E0E;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.centre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+}
+
+
+.NavBar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 23vw;
+    position: fixed;
+    left: 0px;
+    border-right: 1px solid #00524A;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.link {
+    line-height: 3.5rem;
+    width: 20vw;
+    margin: 10px 0;
+}
+
+.active-tab {
+    height: 4rem;
+    background-color: #00524A;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.card-design {
+    height: fit-content;
+    width: 40vw;
+    border-bottom: 1px solid #00524A;
+    margin-left: 2vw;
+    padding-bottom: 2vh;
+}
+
+.homework-title {
+    color: white;
+    font-size: x-large;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content {
+    font-family: 'Inter', sans-serif;
+    font-size: medium;
+    color: #A1C2BF;
+}
+
+.profile-panel{
+    width: 12vw;
+    background-color: #00524A;
+    height: 80vh;
+    margin-left: 12vw;
+}
+.rhs {
+    width: 77vw;
+    height: fit-content;
+    position: absolute;
+    right: 0;
+    left: auto;
+}
