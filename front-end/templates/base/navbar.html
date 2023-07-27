@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/base/main.css'%}">
-    <script src="{% static 'js/base/navbar.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'css/base/navbar.css'%}">
+    <link rel="stylesheet" href="{% static 'css/base/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base/navbar.css' %}">
 </head>
 <body>
-    <div class="wrapper">
-        <div class="navbar">
-            <a href="{% url 'home' %}">CSPortal</a>
-            <a href="{% url 'homeworks' %}">Homeworks</a>
-            <a href="#">Notifications</a>
-            <div class="user-profile">
-                <img src="{% static 'media/images/profile.jpeg' %}" alt="Profile-Picture" class="profile-img">
-                <div class="hidden">
-                    {% if request.user.is_authenticated %}
-                    <a href="{% url 'logout' %}">Logout</a>
-                    {% else %}
-                    <a href="{% url 'login' %}">Login</a>
-                    {% endif %}
-                </div>
+    <div class="nav-wrap">
+        <div class="NavBar">
+            <div class="link active-tab">
+                <a href="{% url 'home' %}">Home</a>
             </div>
-            
+            <div class="link">
+                <a href="">Notifications</a>
+            </div>
+            <div class="link">
+                <a href="{% url 'homeworks' %}">Homeworks</a>
+            </div>
+            <div class="link">
+                <a href="">Report Card</a>
+            </div>
+            <div class="link">
+                <a href="">Marks</a>
+            </div>
         </div>
     </div>
 </body>
