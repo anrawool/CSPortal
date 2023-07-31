@@ -53,8 +53,6 @@ body {
     padding-left: 20px;
 }
 
-<<<<<<< Updated upstream:front-end/static/css/base/index.css
-=======
 .card-design {
     height: fit-content;
     width: 45vw;
@@ -62,7 +60,6 @@ body {
     margin-left: 2vw;
     padding-bottom: 2vh;
 }
->>>>>>> Stashed changes:Designs/homework/index.css
 
 .homework-title {
     color: white;
@@ -79,14 +76,10 @@ body {
     width: 22vw;
     background-color: rgba(10, 10, 10, 0.3);
     height: 80vh;
-<<<<<<< Updated upstream:front-end/static/css/base/index.css
-    margin-left: 12vw;
-    border-radius: 20px;
-=======
+
     margin-left: 5vw;
     margin-right: -1vw;
     border-radius: 1vh;
->>>>>>> Stashed changes:Designs/homework/index.css
 }
 .rhs {
     width: 77vw;
