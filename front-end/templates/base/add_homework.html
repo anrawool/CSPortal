@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/base/main.css' %}">
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/base/login_register.css' %}">
+    <title>Add Homework | CSPortal</title>
+</head>
+<body> 
+    {% include 'base/navbar.html' %}
+    <div class="all-messages">
+        {% if messages %}
+            {% for message in messages %}
+            <li class="messages">{{message}}</li>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <form action="{% url 'add-homework' %}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="assigned_to">Assigned To:</label>
+            <select name="assigned_to" id="assigned_to" multiple>
+                {% for user in users %}
+                <option value="{{ user.pk }}">{{ user.username }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="subject">Subject:</label>
+            <select name="subject" id="subject">
+                <option value="Maths">Mathematics</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" placeholder="Enter the Title...">
+        </div>
+        <div class="form-group">
+            <label for="text">Description:</label>
+            <textarea name="text" id="text" placeholder="Enter the description..."></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>

@@ -7,7 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/base/main.css' %}">
     <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/base/index.css' %}">
-    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/base/homework.css' %}">
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/base/homeworks.css' %}">
 </head>
 
 <body>
@@ -17,12 +17,25 @@
 
                 <div class="Feed">
                     <div class="all-homeworks" style="margin-top: 300px;">
-                        {% for homework in all_homeworks %}
+                        {% for homework in assigned_homeworks %}
                         <div class="card-design homework">
                             <h2>{{homework.title}} - {{homework.subject}}</h2>
                             <div class="extra-info">
                                 <span>Assigned On: {{homework.created_at}}</span>
                                 <span>Updated On: {{homework.updated_at}}</span>
+                            </div>
+                            <p class="text">{{homework.text}}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <hr>
+                    <div class="all-notifications">
+                        {% for notification in assigned_notifications %}
+                        <div class="card-design notification">
+                            <h2>{{notification.title}} - {{notification.subject}}</h2>
+                            <div class="extra-info">
+                                <span>Assigned On: {{notification.created_at}}</span>
+                                <span>Updated On: {{notification.updated_at}}</span>
                             </div>
                             <p class="text">{{homework.text}}</p>
                         </div>
