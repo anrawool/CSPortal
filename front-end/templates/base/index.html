@@ -68,6 +68,8 @@
                                     <span>Updated On: {{ notification.updated_at }}</span>
                                 </div>
                                 <p class="text">{{notification.text}}</p>
+                                <p class="text">Uploaded File:</p>
+                                <p><a href="{{ notification.related_file.url }}"><img class="file-icon" style="max-width: 70px; max-height: 70px;" src="{% static 'images/base/file-icon-new.png' %}" alt="{{notification.related_file.name}}"></a></p>
                             </div>
                             {% endfor %}
                         </div>

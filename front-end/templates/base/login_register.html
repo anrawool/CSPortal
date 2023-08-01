@@ -26,7 +26,7 @@
             <form action="" method="post">
                 {% csrf_token %}
                 <h1 class="heading">CSPortal | Log In</h1>
-                <p class="label">Username</p>
+                <p class="label">Email</p>
                 <input type="text" name="email" class="txt-field username">
                 <p class="label">Password</p>
                 <input type="password" name="password" class="txt-field">
@@ -59,7 +59,6 @@
                 <p class="label">Password</p>
                 <input type="password" name="password" class="txt-field" placeholder="Enter Your Password Here..." autocomplete="off" value="{{formvals.password}}">
                 <input type="number" name="phone_number" class="txt-field" placeholder="Confirm Your Phone No. Here..." autocomplete="off" values="{{formvals.phone_number}}">
-                <input type="file" name="profile-pic">
                 <button type="submit" class="submit" name="Register">Sign Up</button>
                 <p class="sign-up">Already Have An Account? <a href="{% url 'login' %}" class="sign-up-link">Log In</a></p>
             </form>
