@@ -1,61 +1,98 @@
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>CSPortal | Home</title>
-    {% load static %}
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/base/main.css' %}">
-    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/base/index.css' %}">
-    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/base/homeworks.css' %}">
+    {% load static %}
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/base/main.css'%}">
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/base/navbar.css'%}">
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/base/index.css'%}">
 </head>
 
 <body>
+    <div class="date">
+        <div id="date">{{today_date}}</div>
+        <div id="day">{{today_day}}</div>
+    </div>
     {% include 'base/navbar.html' %}
-        <div class="rhs">
-            <div class="centre">
+    <div class="rhs">
+        <div class="centre">
 
-                <div class="Feed">
-                    <div class="all-homeworks" style="margin-top: 300px;">
-                        {% for homework in assigned_homeworks %}
+            <div class="Feed">
+                <div class="homeworks-wrap">
+                    {% if assigned_homeworks|length == 0 %}
                         <div class="card-design homework">
-                            <h2>{{homework.title}} - {{homework.subject}}</h2>
+                            <h2>No Homeworks Assigned Yet</h2>
+                            <!-- TODO : Add a Horizontal line here if possible -->
                             <div class="extra-info">
-                                <span>Assigned On: {{homework.created_at}}</span>
-                                <span>Updated On: {{homework.updated_at}}</span>
+                                <span>Assigned On: {{today_date}}</span>
+                                <span>Updated On: {{today_date}}</span>
                             </div>
-                            <p class="text">{{homework.text}}</p>
+                            <p class="text">Looks like there is no homework assigned to you yet... Enjoy!!!</p>
                         </div>
-                        {% endfor %}
+                    {% endif %}
+                    {% for homework in assigned_homeworks %}
+                    <div class="card-design homework">
+                        <h2>{{homework.title}} - {{homework.subject}}</h2>
+                        <!-- TODO : Add a Horizontal line here if possible -->
+                        <div class="extra-info">
+                            <span>Assigned On: {{homework.created_at}}</span>
+                            <span>Updated On: {{homework.updated_at}}</span>
+                        </div>
+                        <p class="text">{{homework.text}}</p>
                     </div>
-                    <hr>
-                    <div class="all-notifications">
-                        {% for notification in assigned_notifications %}
-                        <div class="card-design notification">
-                            <h2>{{notification.title}} - {{notification.subject}}</h2>
+                    {% endfor %}
+                </div>
+                <hr>
+                <div class="notification-wrap">
+                    {% if assigned_notifications|length == 0 %}
+                        <div class="card-design homework" id="no-notif">
+                            <h2>No Notifications</h2>
+                            <!-- TODO : Add a Horizontal line here if possible -->
                             <div class="extra-info">
-                                <span>Assigned On: {{notification.created_at}}</span>
-                                <span>Updated On: {{notification.updated_at}}</span>
+                                <span>Assigned On: {{today_date}}</span>
+                                <span>Updated On: {{today_date}}</span>
                             </div>
-                            <p class="text">{{homework.text}}</p>
+                            <p class="text">Looks like there is no notification for you today... You are up-to-date!!!</p>
                         </div>
-                        {% endfor %}
+                    {% endif %}
+                        <div class="all-homeworks">
+                            {% for notification in assigned_notifications %}
+                            <div class="card-design homework">
+                                <h2>{{notification.title}}</h2>
+                                <!-- TODO : Add a Horizontal line here if possible -->
+                                <div class="extra-info">
+                                    <span>Assigned On: {{ notification.created_at }}</span>
+                                    <span>Updated On: {{ notification.updated_at }}</span>
+                                </div>
+                                <p class="text">{{notification.text}}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+            </div>
+            <div class="profile-panel">
+
+                <div class="profile">
+                    <h1>{{ user.username |capfirst}}</h1>
+                    <div class="profile-pic"><img src="{{ user.profile_pic.url }}" alt="cute kat" draggable="false" id="profile-pic-image"></div>
+                    <div class="user-details">
+                        <div class="user-item"><span class="user-item-value">Grade:</span> 9</div>
+                        <div class="user-item"><span class="user-item-value">Class:</span> C TrailBlazers</div>
+                        <div class="user-item"><span class="user-item-value">Roll Number:</span> 17</div>
+                        <div class="user-item"><span class="user-item-value">Admin No:</span> 481</div>
+                        <div class="user-item"><span class="user-item-value">Father's Name:</span> Father's name</div>
+                        <div class="user-item"><span class="user-item-value">Mother's Name:</span> C TrailBlazers</div>
+                        <div class="user-item"><span class="user-item-value">Phone Number:</span> {{user.phone_number}}</div>
+                        <div class="user-item"><span class="user-item-value">Emergency Contact</span>: 1234567890</div>
                     </div>
                 </div>
-                <div class="profile-panel">
-        
-                    <div class="profile">
-                        <div class="profile-pic">Profile Picture</div>
-                        <div class="user-details">
-                            Name: Name
-                            Grade: 9
-                            Class: C TrailBlazers
-                        </div>
-                    </div>
-        
-                </div>
+
             </div>
         </div>
+    </div>
 </body>
 
 </html>

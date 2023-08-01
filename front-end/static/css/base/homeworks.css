@@ -32,8 +32,15 @@
     gap: 10px;
 }
 
-.all-homeworks {
+.homeworks-wrap {
     margin: 0rem 3rem 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 30px;
+}
+.all-cards {
+    margin-left: 40vw;
     display: flex;
     flex-direction: column;
     place-items: center;

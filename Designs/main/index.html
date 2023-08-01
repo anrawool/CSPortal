@@ -6,14 +6,14 @@
     <title>CSPortal | Home</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href="main.css">
-    <link rel='stylesheet' type='text/css' media='screen' href="index.css">
     <link rel='stylesheet' type='text/css' media='screen' href="navbar.css">
+    <link rel='stylesheet' type='text/css' media='screen' href="index.css">
 </head>
 
 <body>
     <div class="date">
-        <div id="dat"></div>
-        <div id="day">DummyDay</div>
+        <div id="date"></div>
+        <div id="day"></div>
     </div>
     <div class="nav-wrap">
         <div class="NavBar">
@@ -41,6 +41,7 @@
                 <div class="all-homeworks">
                     <div class="card-design homework">
                         <h2>Complete HW - subject</h2>
+                        <!-- TODO : Add a Horizontal line here if possible -->
                         <div class="extra-info">
                             <span>Assigned On: today's date</span>
                             <span>Updated On: 29/8/23</span>
@@ -50,21 +51,36 @@
                             Praesentium rem quam minus at id.</p>
                     </div>
                 </div>
+                <hr>
+                <div class="all-homeworks">
+                    <div class="card-design homework">
+                        <h2>Complete HW - subject</h2>
+                        <!-- TODO : Add a Horizontal line here if possible -->
+                        <div class="extra-info">
+                            <span>Assigned On: today's date</span>
+                            <span>Updated On: 29/8/23</span>
+                        </div>
+                        <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae nisi alias
+                            provident nihil qui, a eveniet? Omnis est delectus distinctio deserunt aliquam sequi nulla.
+                            Praesentium rem quam minus at id.</p>
+                    </div>
+                </div>
+
             </div>
             <div class="profile-panel">
 
                 <div class="profile">
                     <h1>Ameya</h1>
-                    <div class="profile-pic"><img src="cat.jpg" alt="cute kat" draggable="false"></div>
+                    <div class="profile-pic"><img src="{{requestob.user.profile_pic.url}}" alt="cute kat" draggable="false"></div>
                     <div class="user-details">
-                        <div class="user-item">Grade: 9</div>
-                        <div class="user-item">Class: C TrailBlazers</div>
-                        <div class="user-item">Roll Number: 17</div>
-                        <div class="user-item">Admin No: 481</div>
-                        <div class="user-item">Faher's Name: Father's name</div>
-                        <div class="user-item">Mother's Name: C TrailBlazers</div>
-                        <div class="user-item">Phone Number: 123456790</div>
-                        <div class="user-item">Emergency Contant: 1234567890</div>
+                        <div class="user-item"><span class="user-item-value">Grade:</span> 9</div>
+                        <div class="user-item"><span class="user-item-value">Class:</span> C TrailBlazers</div>
+                        <div class="user-item"><span class="user-item-value">Roll Number:</span> 17</div>
+                        <div class="user-item"><span class="user-item-value">Admin No:</span> 481</div>
+                        <div class="user-item"><span class="user-item-value">Father's Name:</span> Father's name</div>
+                        <div class="user-item"><span class="user-item-value">Mother's Name:</span> C TrailBlazers</div>
+                        <div class="user-item"><span class="user-item-value">Phone Number:</span> 123456790</div>
+                        <div class="user-item"><span class="user-item-value">Emergency Contact</span>: 1234567890</div>
 
 
                     </div>
@@ -73,7 +89,6 @@
             </div>
         </div>
     </div>
-    <script src="index.js"></script>
 </body>
 
 </html>

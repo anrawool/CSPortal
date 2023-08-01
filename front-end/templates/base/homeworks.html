@@ -12,17 +12,18 @@
     {% include 'base/navbar.html' %}
 
     <div class="main-content">
-        <div class="available-tabs">
-            <div class="tabs">
-                <h2>Available Tabs:</h2>
-                <ul>
-                    <li><div class="tab-item">Incomplete Homeworks</div></li>
-                    <li><div class="tab-item">Complete Homeworks</div></li>
-                    <li><div class="tab-item">Extended Homeworks</div></li>
-                </ul> 
-            </div>
-        </div>
-        <div class="all-homeworks">
+        <div class="all-cards">
+            {% if all_homeworks|length == 0 %}
+                <div class="card-design homework">
+                    <h2>No Homeworks Assigned Yet</h2>
+                    <!-- TODO : Add a Horizontal line here if possible -->
+                    <div class="extra-info">
+                        <span>Assigned On: {{today_date}}</span>
+                        <span>Updated On: {{today_date}}</span>
+                    </div>
+                    <p class="text">Looks like there is no homework assigned to you yet... Enjoy!!!</p>
+                </div>
+            {% endif %}
             {% for homework in all_homeworks %}
             <div class="card-design homework">
                 <h2>{{homework.title}} - {{homework.subject}}</h2>
