@@ -87,3 +87,18 @@ body {
     right: 0;
     left: auto;
 }
+<<<<<<< Updated upstream:Designs/login/homework/index.css
+=======
+
+.profile {
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 20px;
+}
+
+.file-icon {
+    max-width: 20px;
+    max-height: 20px;
+}
+>>>>>>> Stashed changes:Designs/homework/index.css

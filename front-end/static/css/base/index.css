@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+
+body {
+    background-color: #050811;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.centre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.link {
+    line-height: 3.5rem;
+    width: 20vw;
+    margin: 10px 0;
+}
+
+.link:not(.active-tab) {
+    margin: 10px 30px;
+    overflow: hidden;
+}
+
+.link a {
+    text-decoration: none;
+    color: white;
+    transition: color .3s ease-in-out;
+}
+
+.link a:hover {
+    color: rgb(199, 199, 255);
+    transition: color .3s ease-in-out;
+}
+
+hr {
+    margin-top: 3rem;
+}
+
+.active-tab {
+    height: 4rem;
+    background-color: #5F7CE8;
+    width: 14vw;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+
+}
+
+.card-design {
+    height: fit-content;
+    width: 45vw;
+    border-bottom: 1px solid rgb(91, 125, 249, 0.37);
+    margin-left: 2vw;
+    padding-bottom: 2vh;
+}
+
+.homework-title {
+    color: white;
+    font-size: x-large;
+}
+
+.content {
+    font-family: 'Inter', sans-serif;
+    font-size: medium;
+    color: #A1C2BF;
+}
+
+.profile-panel {
+    width: 19vw;
+    background-color: rgba(10, 10, 10, 0.3);
+    height: 80vh;
+    margin-left: 5vw;
+    margin-right: 1vw;
+    border-radius: 2.5vh;
+    border-left: 1px solid  rgb(91, 125, 249, 0.37);
+    padding-left: 1vw;
+
+}
+
+.rhs {
+    width: 77vw;
+    height: fit-content;
+    position: absolute;
+    right: 0;
+    left: auto;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.profile-pic {
+    border-radius: 100%;
+    overflow: hidden;
+    width: 8.5vw;
+    height: 8.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-pic-image {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.user-details {
+    padding-top: 2rem;
+
+}
+.notification-wrap .card-design:last-child {
+    margin-bottom: 20px;
+}
+
+
+.user-item-value {
+    color: #A1AFC2;
+}
+
+
+.date {
+    border-radius: 24px;
+    background: var(--brand-800, rgb(10, 19, 31, 0.65));
+    box-shadow: 0px 1px 10px -9px #38E1D1;
+    height: 5rem;
+    width: 30rem;
+    position: fixed;
+    top: 3rem;
+    color: white;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -10vh;
+}
+
+#date {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    text-align: left;
+    padding-right: 2rem;
+}
+
+#day{
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    text-align: right;
+    padding-left: 2rem;;
+}
+
+.text {
+    color: #A1AFC2;
+}
+
+.extra-info {
+    color: #a1afc2b8;
+    display: flex;
+    font-size: .8rem;
+    justify-content: space-between;
+}
+
+.Feed {
+    position: relative;
+    min-height: 70vh;
+    top: 23vh;
+}
+
+.notification-wrap {
+    margin-bottom: 5vh;
+    position: absolute;
+    top: 100%;
+}
+
+/* Homeworks.html */
+
+.main-content .all-homeworks {
+    margin-right: -100px;
+}
