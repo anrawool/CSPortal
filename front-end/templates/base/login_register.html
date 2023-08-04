@@ -26,8 +26,18 @@
             <form action="" method="post">
                 {% csrf_token %}
                 <h1 class="heading">CSPortal | Log In</h1>
+<<<<<<< HEAD
+<<<<<<< Updated upstream
                 <p class="label">Username</p>
+                <input type="text" name="username" class="txt-field username">
+=======
+                <p class="label">Email</p>
                 <input type="text" name="email" class="txt-field username">
+>>>>>>> Stashed changes
+=======
+                <p class="label">Email</p>
+                <input type="text" name="email" class="txt-field username">
+>>>>>>> 82cee63125e74583a843f51089f1bada108128f6
                 <p class="label">Password</p>
                 <input type="password" name="password" class="txt-field">
                 <button type="submit" class="submit" name="Login">Log In</button>
@@ -57,9 +67,18 @@
                 <p class="label">Email</p>
                 <input type="email" name="email" class="txt-field" placeholder="Enter Your Email Here..." autocomplete="off" value="{{formvals.email}}"/>
                 <p class="label">Password</p>
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+                <input type="password" name="password1" class="txt-field" placeholder="Enter Your Password Here..." autocomplete="off" value="{{formvals.password1}}">
+                <input type="password" name="password2" class="txt-field" placeholder="Confirm Your Password Here..." autocomplete="off" values="{{formvals.password2}}">
+=======
                 <input type="password" name="password" class="txt-field" placeholder="Enter Your Password Here..." autocomplete="off" value="{{formvals.password}}">
                 <input type="number" name="phone_number" class="txt-field" placeholder="Confirm Your Phone No. Here..." autocomplete="off" values="{{formvals.phone_number}}">
-                <input type="file" name="profile-pic">
+>>>>>>> Stashed changes
+=======
+                <input type="password" name="password" class="txt-field" placeholder="Enter Your Password Here..." autocomplete="off" value="{{formvals.password}}">
+                <input type="number" name="phone_number" class="txt-field" placeholder="Confirm Your Phone No. Here..." autocomplete="off" values="{{formvals.phone_number}}">
+>>>>>>> 82cee63125e74583a843f51089f1bada108128f6
                 <button type="submit" class="submit" name="Register">Sign Up</button>
                 <p class="sign-up">Already Have An Account? <a href="{% url 'login' %}" class="sign-up-link">Log In</a></p>
             </form>
