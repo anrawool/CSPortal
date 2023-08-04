@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base/homeworks.css' %}">
+    <title>CSPortal | Homeworks</title>
+</head>
+<body>
+    {% include 'base/navbar.html' %}
+        <div class="all-cards">
+            {% if all_notifications|length == 0 %}
+                <div class="card-design homework" id="no-notif">
+                    <h2>No Notifications</h2>
+                    <div class="extra-info">
+                        <span>Assigned On: {{today_date}}</span>
+                        <span>Updated On: {{today_date}}</span>
+                    </div>
+                    <p class="text">Looks like there is no notification for you today... You are up-to-date!!!</p>
+                </div>
+            {% endif %}
+                <div class="all-homeworks">
+                    {% for notification in all_notifications %}
+                    <div class="card-design homework">
+                        <h2>{{notification.title}}</h2>
+                        <!-- TODO : Add a Horizontal line here if possible -->
+                        <div class="extra-info">
+                            <span>Assigned On: {{ notification.created_at }}</span>
+                            <span>Updated On: {{ notification.updated_at }}</span>
+                        </div>
+                        <p class="text">{{notification.text}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+        </div>
+</html>
