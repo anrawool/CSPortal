@@ -75,17 +75,9 @@ def registerUser(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-            user.username = user.username.lower()
-=======
+
             user.email = user.email
             user.password = make_password(form.cleaned_data['password'])
->>>>>>> Stashed changes
-=======
-            user.email = user.email
-            user.password = make_password(form.cleaned_data['password'])
->>>>>>> 82cee63125e74583a843f51089f1bada108128f6
             user.save()
             login(request, user)
             return redirect("home")

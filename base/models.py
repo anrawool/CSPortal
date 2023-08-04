@@ -5,18 +5,12 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> 82cee63125e74583a843f51089f1bada108128f6
+
 class User(AbstractUser):
     class Role(models.TextChoices):
         ADMIN = "ADMIN", "Admin"
         STUDENT = "STUDENT", "Student"
         TEACHER = "TEACHER", "Teacher"
-<<<<<<< HEAD
-
     base_role = Role.STUDENT
 
     username = models.CharField(max_length=200, unique=True, default="Guest", null=True)
@@ -42,9 +36,6 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.username
->>>>>>> Stashed changes
-=======
->>>>>>> 82cee63125e74583a843f51089f1bada108128f6
 
     base_role = Role.STUDENT
 
@@ -128,12 +119,6 @@ class NotificationPost(models.Model):
     assigned_to = models.ManyToManyField(User, related_name="give_to")
     title = models.CharField(max_length=200)
     text = models.TextField()
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-    created_at = models.DateField(auto_created=True)
-=======
-=======
->>>>>>> 82cee63125e74583a843f51089f1bada108128f6
     related_file = models.FileField(upload_to="./uploads", null=True, blank=True)
     created_at = models.DateField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -153,9 +138,4 @@ class StudentProfile(models.Model):
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
     if created and instance.role == "STUDENT":
-<<<<<<< HEAD
         StudentProfile.objects.create(user=instance)
->>>>>>> Stashed changes
-=======
-        StudentProfile.objects.create(user=instance)
->>>>>>> 82cee63125e74583a843f51089f1bada108128f6
