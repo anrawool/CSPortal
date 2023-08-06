@@ -5,3 +5,13 @@ body {
     font-family: "Manrope", sans-serif;
     background-color: #F4FAFF;
 }
+
+.card-design {
+    height: fit-content;
+    width: 40vw;
+    border-bottom: 1px solid rgb(91, 125, 249, 0.37);
+    color:white;
+    padding: 20px;
+    margin-left: 2vw;
+    padding-bottom: 2vh;
+}
