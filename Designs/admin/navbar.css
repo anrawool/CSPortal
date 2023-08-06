@@ -1,0 +1,162 @@
+ .nav-wrap {
+     height: 100%;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 17vw;
+     box-sizing: border-box;
+ }
+
+ .NavBar {
+     display: flex;
+     flex-direction: column;
+     height: 100vh;
+     width: 17vw;
+     border-right: 1px solid rgb(91, 125, 249, 0.37);
+     color: white;
+     font-family: 'Raleway', sans-serif;
+     font-size: 2rem;
+     padding-right: 2vw;
+     padding-left: -1vw;
+ }
+
+ .header {
+     color: white;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ .heading {
+     text-align: left;
+     color: white;
+     font-weight: 100;
+     font-size: 1.2rem;
+ }
+
+ .rhs {
+     /* Stands for Right Hand Side, used to style the right panle of the app */
+     background-color: #0A0E1A;
+     height: 80vh;
+     width: 80vw;
+     display: flex;
+     flex-direction: column;
+     z-index: 10000;
+     top: 10vh;
+     left: 19.5vw;
+     border-radius: 1rem;
+ }
+
+ .top-row {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+ }
+
+ .top-row {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+ }
+
+ .text-fields {
+     display: flex;
+     flex-direction: row;
+ }
+
+ .text-field {
+     width: 20rem;
+     height: 3rem;
+     background-color: #05060c;
+     border-radius: 0.5rem;
+     color: azure;
+     border-color: transparent;
+     outline: none !important;
+     resize: none;
+ }
+
+ #title-field {
+     width: 30rem;
+     height: 3rem;
+     background-color: #05060c;
+     border-radius: 0.5rem;
+     color: azure;
+     border-color: transparent;
+     outline: none !important;
+     resize: none;
+ }
+
+ .text-field input {
+     outline: none !important;
+ }
+
+ .text-field:focus {
+     width: 20rem;
+     height: 3rem;
+     background-color: black;
+     outline: none !important;
+     color: azure;
+     animation: highlight 450ms 1;
+ }
+
+ @keyframes highlight {
+     from {
+         background-color: #05060c;
+     }
+
+     to {
+         background-color: black;
+     }
+ }
+
+ .mid-row {
+     display: flex;
+     justify-content: center;
+     top: 2rem;
+     position: relative;
+ }
+
+ #textarea {
+     background-color: #05060c;
+     width: 70vw;
+     /* Set the initial width to 90% of the parent container */
+     height: 6rem;
+     /* Set the initial height to 6 rem */
+     color: white;
+
+ }
+
+ #textarea:focus {
+     animation: highlight 400ms 1;
+ }
+
+ #submit-button {
+     background-color: #5F7CE8;
+     top: 3rem;
+     position: relative;
+     width: 30rem;
+     margin-left: auto;
+     margin-right: auto;
+     height: 3rem;
+     border-radius: 0.5rem;
+     border-color: transparent;
+     box-shadow: 0px 1px 10px -10px #5F7CE8;
+ }
+
+ #submit-button:hover {
+     animation: buttonHover 600ms forwards;
+
+ }
+
+ @keyframes buttonHover {
+     from {
+         background-color: #5F7CE8;
+         box-shadow: 0px 1px 10px -10px #5F7CE8;
+
+     }
+
+     to {
+         box-shadow: 0px 1px 15px -10px #4b6ce6;
+         background-color: #4567e4;
+     }
+
+ }
